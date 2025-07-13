@@ -1,0 +1,65 @@
+{
+  "polyfillFiles": [
+    "static/chunks/polyfills-42372ed130431b0a.js"
+  ],
+  "devFiles": [],
+  "ampDevFiles": [],
+  "lowPriorityFiles": [
+    "static/Y9tH3JJjpxehE7k5UGFor/_buildManifest.js",
+    "static/Y9tH3JJjpxehE7k5UGFor/_ssgManifest.js"
+  ],
+  "rootMainFiles": [],
+  "pages": {
+    "/": [
+      "static/chunks/webpack-38cee4c0e358b1a3.js",
+      "static/chunks/framework-64ad27b21261a9ce.js",
+      "static/chunks/main-2b485d80c4cfdae3.js",
+      "static/chunks/pages/index-5cf630c21d188386.js"
+    ],
+    "/_app": [
+      "static/chunks/webpack-38cee4c0e358b1a3.js",
+      "static/chunks/framework-64ad27b21261a9ce.js",
+      "static/chunks/main-2b485d80c4cfdae3.js",
+      "static/chunks/pages/_app-5810f0a972a88d88.js"
+    ],
+    "/_error": [
+      "static/chunks/webpack-38cee4c0e358b1a3.js",
+      "static/chunks/framework-64ad27b21261a9ce.js",
+      "static/chunks/main-2b485d80c4cfdae3.js",
+      "static/chunks/pages/_error-7a92967bea80186d.js"
+    ],
+    "/account": [
+      "static/chunks/webpack-38cee4c0e358b1a3.js",
+      "static/chunks/framework-64ad27b21261a9ce.js",
+      "static/chunks/main-2b485d80c4cfdae3.js",
+      "static/chunks/pages/account-316d2a65848dd5c4.js"
+    ],
+    "/dashboard": [
+      "static/chunks/webpack-38cee4c0e358b1a3.js",
+      "static/chunks/framework-64ad27b21261a9ce.js",
+      "static/chunks/main-2b485d80c4cfdae3.js",
+      "static/chunks/602-acb8d5b43105e66d.js",
+      "static/chunks/pages/dashboard-cf8f2ff0cc29afef.js"
+    ],
+    "/login": [
+      "static/chunks/webpack-38cee4c0e358b1a3.js",
+      "static/chunks/framework-64ad27b21261a9ce.js",
+      "static/chunks/main-2b485d80c4cfdae3.js",
+      "static/chunks/pages/login-f757b9128a1eb325.js"
+    ],
+    "/price-tracker": [
+      "static/chunks/webpack-38cee4c0e358b1a3.js",
+      "static/chunks/framework-64ad27b21261a9ce.js",
+      "static/chunks/main-2b485d80c4cfdae3.js",
+      "static/chunks/384-ae2b67204ecf24e3.js",
+      "static/chunks/pages/price-tracker-90d27ef8af1443f2.js"
+    ],
+    "/signup": [
+      "static/chunks/webpack-38cee4c0e358b1a3.js",
+      "static/chunks/framework-64ad27b21261a9ce.js",
+      "static/chunks/main-2b485d80c4cfdae3.js",
+      "static/chunks/pages/signup-4606b3eb8d8901fc.js"
+    ]
+  },
+  "ampFirstPages": []
+}

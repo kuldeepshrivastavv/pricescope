@@ -19,11 +19,12 @@
     "dotenv": "^16.0.1",
     "framer-motion": "^10.16.4",
     "lucide-react": "^0.484.0",
+    "next": "^14.2.30",
     "node-cron": "^3.0.3",
     "nodemailer": "^6.9.8",
     "puppeteer": "^24.12.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.55.0",
     "react-hot-toast": "^2.5.2",
@@ -37,10 +38,9 @@
     "tailwindcss-fluid-type": "^2.0.7"
   },
   "scripts": {
-    "start": "vite",
-    "dev": "vite",
-    "build": "vite build --sourcemap",
-    "serve": "vite preview"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "eslintConfig": {
     "extends": [
