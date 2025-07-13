@@ -65,17 +65,22 @@ export default function Dashboard() {
 
   return (
     <div style={{ maxWidth: 800, margin: '40px auto' }}>
-      <h1>Dashboard</h1>
+      <h1 className="text-3xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">Dashboard</h1>
       {user && (
-        <div style={{ marginBottom: 24 }}>
-          <h2>User Info</h2>
-          <p><strong>Email:</strong> {user.email}</p>
-          <p><strong>ID:</strong> {user.id}</p>
+        <div className="mb-6 bg-white dark:bg-zinc-900 rounded-lg p-4 shadow flex items-center justify-between">
+          <div>
+            <div className="font-semibold text-lg">Welcome, <span className="text-primary">{user.email}</span></div>
+            <div className="text-xs text-zinc-500">User ID: {user.id}</div>
+          </div>
+          <button
+            className="px-3 py-1 rounded bg-gradient-to-r from-primary to-secondary text-white font-semibold hover:scale-105 transition"
+            onClick={async () => { await supabase.auth.signOut(); window.location.href = '/login'; }}
+          >Logout</button>
         </div>
       )}
-      <div style={{ marginBottom: 24 }}>
-        <h2>Add Product</h2>
-        <form onSubmit={handleAddProduct} style={{ marginBottom: 24 }}>
+      <div className="mb-8">
+        <h2 className="text-xl font-bold mb-2">Add Product</h2>
+        <form onSubmit={handleAddProduct} className="flex flex-wrap gap-2 items-center mb-4">
           <input
             type="url"
             placeholder="Product URL"
@@ -139,17 +144,17 @@ export default function Dashboard() {
           </button>
           <button type="submit" disabled={loading}>{loading ? 'Adding...' : 'Add Product'}</button>
         </form>
-        <h2>Tracked Products</h2>
-        {products.length === 0 ? <p>No products tracked yet.</p> : <ul>{products.map(p => <li key={p.id}>
-          <a href={`/product/${p.id}`} style={{fontWeight:'bold'}}>{p.name}</a>
-          <img src={p.image} alt={p.name} width={40} style={{verticalAlign:'middle',marginLeft:8}} />
-          <span style={{fontStyle:'italic',marginLeft:8}}>{p.ai_caption}</span>
+        <h2 className="text-xl font-bold mb-2">Tracked Products</h2>
+        {products.length === 0 ? <p className="text-zinc-500">No products tracked yet.</p> : <ul className="space-y-2">{products.map(p => <li key={p.id} className="flex items-center bg-white dark:bg-zinc-900 rounded-lg p-3 shadow">
+          <a href={`/product/${p.id}`} className="font-bold text-primary hover:underline text-lg">{p.name}</a>
+          <img src={p.image} alt={p.name} width={40} className="rounded ml-4" />
+          <span className="italic ml-4 text-zinc-500">{p.ai_caption}</span>
         </li>)}</ul>}
       </div>
       <div>
-        <h2>Price Alerts</h2>
+        <h2 className="text-xl font-bold mb-2">Price Alerts</h2>
         {/* TODO: List alerts here */}
-        {alerts.length === 0 ? <p>No alerts set yet.</p> : <ul>{alerts.map(a => <li key={a.id}>{a.productName} - Target: ₹{a.targetPrice}</li>)}</ul>}
+        {alerts.length === 0 ? <p className="text-zinc-500">No alerts set yet.</p> : <ul>{alerts.map(a => <li key={a.id}>{a.productName} - Target: ₹{a.targetPrice}</li>)}</ul>}
       </div>
     </div>
   );
